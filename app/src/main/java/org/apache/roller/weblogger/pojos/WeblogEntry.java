@@ -36,6 +36,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
+import com.google.common.base.Strings;
 import org.apache.commons.text.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -835,7 +836,7 @@ public class WeblogEntry implements Serializable {
             base = DateUtil.format8chars(getPubTime());
         }
         
-        return base;
+        return Strings.nullToEmpty(base);
     }
     
     /**
